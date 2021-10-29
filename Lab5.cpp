@@ -73,7 +73,7 @@ int main(int argc, char **argv)
 	
 	welcome ( ) ; //Welcome message for starting the game
 	
-	while ( again ) {
+	do {
 		if ( !again ) { //checking to see if again is still true and ending the game if it isnt
 			break ;
 		}
@@ -102,6 +102,8 @@ int main(int argc, char **argv)
 			again = play_again ( turns ) ; //checking to see if you want to play again
 		}
 	}
+	while ( again ) ;
+	
 	wins_losses ( wins , losses ) ; //displaying how many times you won or lost if game is ended
 	return 0 ;
 }
